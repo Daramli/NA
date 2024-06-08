@@ -1,0 +1,1197 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="ie=Edge">
+  <meta name="wieport" content="width=device-width,height=device-height" initial-scale=1.0>
+  <meta name="description" content="Car Search Online">
+  <meta name="keywords" content="HTML, CSS, JavaScript">
+  <meta name="author" content="Antra Hagure, Elsie Wilkinson,Ellie Healy, Gema">
+  <title>Nasir Automotive</title>
+  <link rel="shortcut icon" href="icons8-car-96.png" type="image/x-icon">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!--Document wrapper-->
+  <div class="content_wrapper">
+
+    <header>
+      <div class="container">
+        <h1 class="header_title">Welcome to Nasir Automotive</h1>
+        <h3 class="header_sub_title">Find your ideal Car</h3>
+      </div>
+      <audio src="Pimp-My-Ride.mp3" autoplay></audio>
+    </header>
+    <!--Form Wrapper-->
+    <div class="form_wrapper">
+
+      <!-- Form starts here-->
+      <form name="my_form" action="" method="Post" id="filter">
+        <!--Car Make Option-->
+        <div class="item">
+          <label for="make">Brand</label>
+          <select name="make" id="make" onChange="populate(this.id, 'model')">
+            <option value="Any" id="0">All</option>
+            <option value="Audi" id="1">Audi</option>
+            <option value="BMW" id="2">BMW</option>
+            <option value="Chrysler" id="3">Chrysler</option>
+            <option value="Ford" id="4">Ford</option>
+            <option value="Honda" id="5">Honda</option>
+            <option value="Hyundai" id="6">Hyundai</option>
+            <option value="Jaguar" id="7">Jaguar</option>
+            <option value="Kia" id="8">Kia</option>
+            <option value="Lexus" id="9">Lexus</option>
+            <option value="Mercedes" id="10">Mercedes</option>
+            <option value="Nissan" id="11">Nissan</option>
+            <option value="Seat" id="12">Seat</option>
+            <option value="Toyota" id="13">Toyota</option>
+            <option value="Vauxhall" id="14">Vauxhall</option>
+          </select>
+        </div>
+
+        <!--Car Model Option-->
+        <div class="item">
+          <label for="model">Model </label>
+          <select name="model" id="model">
+            <option value="Any" id="0">All</option>
+            <!--Audi Car Models-->
+            <optgroup label="Audi" id="Audi"></optgroup>
+            <option value="A3" id="1">A3</option>
+            <option value="e-tron" id="2">e-tron</option>
+            <option value="Q5" id="3">Q5</option>
+            <option value="RS7" id="4">RS7</option>
+            <option value="SQ2" id="5">SQ2</option>
+            <option value="TT" id="6">TT</option>
+            <!--BMW Car Models-->
+            <optgroup label="BMW" id="BMW"></optgroup>
+            <option value="3 Series" id="7">3 Series</option>
+            <option value="Alpina B8" id="8">Alpina B8</option>
+            <option value="i7" id="9">i7</option>
+            <option value="X5" id="10">X5</option>
+            <option value="M6" id="11">M6</option>
+            <option value="Z3" id="12">Z3</option>
+            <!--Chrysler Car Models-->
+            <optgroup label="Chrysler" id="Chrysler"></optgroup>
+            <option value="300C" id="13">300C</option>
+            <option value="Crossfire" id="14">Crossfire</option>
+            <option value="Delta" id="15">Delta</option>
+            <option value="1Grand Voyager" id="16">Grand Voyager</option>
+            <option value="PT Cruiser" id="17">PT Cruiser</option>
+            <option value="Ypsilon" id="18">Ypsilon</option>
+            <!--Ford Car Models-->
+            <optgroup label="Ford" id="Ford"></optgroup>
+            <option value="B-Max" id="19">B-Max</option>
+            <option value="C-Max" id="20">C-Max</option>
+            <option value="Escape" id="21">Escape</option>
+            <option value="Fiesta" id="22">Fiesta</option>
+            <option value="Focus" id="23">Focus</option>
+            <option value="Mustang Mach-E" id="24">Mustang Mach-E</option>
+            <!--Honda Car Models-->
+            <optgroup label="Honda" id="Honda"></optgroup>
+            <option value="Accord" id="25">Accord</option>
+            <option value="Civic" id="26">Civic</option>
+            <option value="CR-X" id="27">CR-X</option>
+            <option value="HR-V" id="28">HR-V</option>
+            <option value="Jazz" id="29">Jazz</option>
+            <option value="ZR-V" id="30">ZR-V</option>
+            <!--Hyundai Car Models-->
+            <optgroup label="Hyundai" id="Hyundai"></optgroup>
+            <option value="Bayon" id="31">Bayon</option>
+            <option value="i20" id="32">i20</option>
+            <option value="i30" id="33">i30</option>
+            <option value="IONIQ" id="34">IONIQ</option>
+            <option value="Kona" id="35">Kona</option>
+            <option value="TUSCON" id="36">TUSCON</option>
+            <!--Jaguar Car Models-->
+            <optgroup label="Jaguar" id="Jaguar"></optgroup>
+            <option value="E-PACE" id="37">E-PACE</option>
+            <option value="F-PACE" id="38">F-PACE</option>
+            <option value="XE" id="39">XE</option>
+            <option value="XF" id="40">XF</option>
+            <option value="XKR" id="41">XKR</option>
+            <option value="X-Type" id="42">X-Type</option>
+            <!--Kia Car Models-->
+            <optgroup label="Kia" id="Kia"></optgroup>
+            <option value="Any">Any</option>
+            <option value="Ceed" id="43">Ceed</option>
+            <option value="Picanto" id="44">Picanto</option>
+            <option value="Sportage" id="45">Sportage</option>
+            <option value="Stonic" id="46">Stonic</option>
+            <option value="Venga" id="47">Venga</option>
+            <option value="XCeed" id="48">XCeed</option>
+            <!--Lexus Car Models-->
+            <optgroup label="Lexus" id="Lexus"></optgroup>
+            <option value="CT" id="49">CT</option>
+            <option value="ES" id="50">ES</option>
+            <option value="IS" id="51">IS</option>
+            <option value="NX" id="52">NX</option>
+            <option value="RX" id="53">RX</option>
+            <option value="RXL" id="54">RXL</option>
+            <!--Mercedes Car Models-->
+            <optgroup label="Mercedes" id="Mercedes"></optgroup>
+            <option value="A Class" id="55">A Class</option>
+            <option value="C Class" id="56">C Class</option>
+            <option value="CLA Class" id="57">CLA Cass</option>
+            <option value="E Class" id="58">E Cass</option>
+            <option value="GLA Class" id="59">GLA Class</option>
+            <option value="GLE" id="60">GLE</option>
+            <!--Nissan Car Models-->
+            <optgroup label="Nissan" id="Nissan"></optgroup>
+            <option value="ARIYA" id="61">ARIYA</option>
+            <option value="62" id="62">Juke</option>
+            <option value="Juke" id="63">Micra</option>
+            <option value="Pulsar" id="64">Pulsar</option>
+            <option value="Qashqai" id="65">Qashqai</option>
+            <option value="X-Trail" id="66">X-Trail</option>
+            <!--Seat Car Models-->
+            <optgroup label="Seat" id="Seat"></optgroup>
+            <option value="Alhambra " id="67">Alhambra</option>
+            <option value="Arona" id="68">Arona</option>
+            <option value="Ateca" id="69">Ateca</option>
+            <option value="Ibiza" id="70">Ibiza</option>
+            <option value="Leon" id="71">Leon</option>
+            <option value="Tarraco" id="72">Tarraco</option>
+            <!--Toyota Car Models-->
+            <optgroup label="Toyota" id="Toyoyta"></optgroup>
+            <option value="Auris" id="73">Auris</option>
+            <option value="AYGO" id="74">AYGO</option>
+            <option value="Corolla" id="75">Corolla</option>
+            <option value="Estima" id="76">Estima</option>
+            <option value="PROACE Verso" id="77">PROACE Verso</option>
+            <option value="Yaris Cross" id="78">Yaris Cross</option>
+            <!--Vauxxall Car Models-->
+            <optgroup label="Vauxhall" id="Vauxhall"></optgroup>
+            <option value="Astra" id="79">Astra</option>
+            <option value="Crossland" id="80">Crossland X</option>
+            <option value="Grandland" id="81">Grandland X</option>
+            <option value="Mokka" id="82">Mokka</option>
+            <option value="Mokka" id="83">Mokka X</option>
+            <option value="Zafira Tourer" id="84">Zafira Tourer</option>
+          </select>
+        </div><!--class="content_top" ends here-->
+
+        <!--Car Price Option-->
+        <div class="item">
+          <label for="price">Price</label>
+          <select name="price" id="price">
+            <option value="Any" id="0">All</option>
+            <option value=" $2000- $10000" id="1"> $2000- $10000</option>
+            <option value=" $10000- $20000" id="2"> $10001- $20000</option>
+            <option value=" $20000- $50000" id="3"> $20001- $50000</option>
+            <option value=" $50000+" id="4"> $50001+</option>
+          </select>
+        </div>
+
+
+
+        <!--Buttons under the form-->
+        <input type="button" value="Submit" name="Search" id="submit"
+          onclick="handleSubmit(),handleSubmitModel(),handleSubmitPrice(),audio.play()" ;>
+        <input type="reset" value="Reset" name="Reset" id="reset" onclick="handleReset(),audio.play()" ; />
+        <div id="openWishlist">
+          <span id="heartBtnTop" onclick="openWishlist(), audio.play()">&copy; </span>
+        </div>
+    </div>
+    </form>
+
+    <!-- class="form_wrapper" ends-->
+
+
+
+    <!--Product Section-->
+    <main>
+
+      <!--Wishlist Sidebar-->
+      <!--JavaScript void 0 means returning undefined (void) as a primitive value.
+        You might come across the term “JavaScript:void(0)” while going through 
+        HTML documents. It is used to prevent any side effects caused while inserting
+         an expression in a web page. -->
+
+
+
+      <aside class="sidebar" id="wishlist">
+        <a href="javascript:void(0)" id="closeWishlist" onclick="closeWishlist(),audio.play()">&times;</a>
+        <img class="navLogo" src="drmonta.png" alt="Auto Whizz Logo">
+      </aside>
+
+
+
+      <div class="product_wrappper">
+
+        <div class="grid">
+
+          <!--Audi Products-->
+          <div class="product"> <!--grid_item-->
+            <div id="product0">
+              <img class="card_img" src="./db/img/Audi_A3_9095.jpg" />
+              <button type="button" class="card_btn" id="0"><span>&#9829</span></button>
+              <div class="card_content">
+                <h3 class="card_header"> Price: $9095</h3>
+                <p class="card_text">Make:Audi</p>
+                <p class="card_text">Model:A3 </p>
+              </div> <!--class="content" ends-->
+
+            </div> <!--id="product0"-->
+
+          </div><!--class="product" ends-->
+
+
+          <div class="product bmw">
+            <div id="product1">
+              <img class="card_img" src="./db/img/Audi_Etron_35000.jpg" />
+              <button class="card_btn" id="1"><span>&#9829</span></button>
+              <div class="card_content">
+                <h3 class="card_header"> Price: $35000</h3>
+                <p class="card_text">Make:Audi</p>
+                <p class="card_text">Mode:E-Tron </p>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="product">
+            <div id="product2">
+              <img class="card_img" src="./db/img/Audi_q5_33995.jpg" />
+              <button class="card_btn" id="2"><span>&#9829</span></button>
+              <div class="card_content">
+                <h3 class="card_header">Price: $33995</h3>
+                <p class="card_text">Make:Audi</p>
+                <p class="card_text">Model:Q5 </p>
+              </div>
+            </div>
+          </div>
+
+
+
+          <div class="product bmw">
+            <div id="product3">
+              <img class="card_img" src="./db/img/Audi_RS7_37450.jpg" />
+              <button class="card_btn" id="3"><span>&#9829</span></button>
+              <div class="card_content">
+                <h3 class="card_header"> Price: $37450</h3>
+                <p class="card_text">Make:Audi</p>
+                <p class="card_text">Model:RS7 </p>
+              </div>
+            </div>
+          </div>
+          <div class="product">
+            <div id="product4">
+              <img class="card_img" src="./db/img/Audi_SQ2_19000.jpg" />
+              <button class="card_btn" id="4"><span>&#9829</span></button>
+              <div class="card_content">
+                <h3 class="card_header">Price: $19000</h3>
+                <p class="card_text">Make:Audi</p>
+                <p class="card_text">Model:SQ2 </p>
+              </div>
+            </div>
+          </div>
+          <div class="product">
+            <div id="product5">
+              <img class="card_img" src="./db/img/Audi_Tt_24990.jpg" />
+              <button class="card_btn" id="5"><span>&#9829</span></button>
+              <div class="card_content">
+                <h3 class="card_header"> Price: $24990</h3>
+                <p class="card_text">Make:Audi</p>
+                <p class="card_text">Model:TT </p>
+              </div>
+            </div>
+          </div>
+          <!--BMW   PRODUCTS-->
+          <div class="product">
+            <div id="product6">
+              <img class="card_img" src="./db/img/BMW_Z3_7950.jpg" />
+              <button class="card_btn" id="6"><span>&#9829</span></button>
+              <div class="card_content">
+                <h3 class="card_header">Price: $7500</h3>
+                <p class="card_text">Make:BMW</p>
+                <p class="card_text">Model:Z3 </p>
+              </div>
+            </div>
+          </div>
+          <div class="product">
+            <div id="product7">
+              <img class="card_img" src="./db/img/BMW_m6_12995.jpg" />
+              <button class="card_btn" id="7"><span>&#9829</span></button>
+              <div class="card_content">
+                <h3 class="card_header">Price: $12995</h3>
+                <p class="card_text">Make:BMW</p>
+                <p class="card_text">Model:M6 </p>
+              </div>
+            </div>
+          </div>
+          <div class="product">
+            <div id="product8">
+              <img class="card_img" src="./db/img/BMW_X5_48995.jpg" />
+              <button class="card_btn" id="8"><span>&#9829</span></button>
+              <div class="card_content">
+                <h3 class="card_header">Price: $48995</h3>
+                <p class="card_text">Make:BMW</p>
+                <p class="card_text">Model:X5 </p>
+              </div>
+            </div>
+          </div>
+          <div class="product">
+            <div id="product9">
+              <img class="card_img" src="./db/img/BMW_I7_118355.jpg" />
+              <button class="card_btn" id="9"><span>&#9829</span></button>
+              <div class="card_content">
+                <h3 class="card_header">Price: $118355</h3>
+                <p class="card_text">Make:BMW</p>
+                <p class="card_text">Model:i7 </p>
+              </div>
+            </div>
+          </div>
+          <div class="product">
+            <div id="product10">
+              <img class="card_img" src="./db/img/BMW_Alpina_22995.jpg" />
+              <button class="card_btn" id="10"><span>&#9829</span></button>
+              <div class="card_content">
+                <h3 class="card_header">Price: $22995</h3>
+                <p class="card_text">Make:BMW</p>
+                <p class="card_text">Model:Alpina </p>
+              </div>
+            </div>
+          </div>
+          <div class="product">
+            <div id="product11">
+              <img class="card_img" src="./db/img/BMW_3_Series_10395.jpg" />
+              <button class="card_btn" id="11"><span>&#9829</span></button>
+              <div class="card_content">
+                <h3 class="card_header">Price: $10395</h3>
+                <p class="card_text">Make:BMW</p>
+                <p class="card_text">Model:3 Series </p>
+              </div>
+            </div>
+          </div>
+          <!--Chrysler Car Models-->
+          <div class="product">
+            <div id="product12">
+              <img class="card_img" src="./db/img/Chrysler_300c_8995.jpg" />
+              <button class="card_btn" id="12"><span>&#9829</span></button>
+              <div class="card_content">
+                <h3 class="card_header">Price: $8995</h3>
+                <p class="card_text">Make:Chrysler</p>
+                <p class="card_text">Model:300C </p>
+              </div>
+            </div>
+          </div>
+          <div class="product">
+            <div id="product13">
+              <img class="card_img" src="./db/img/Chrysler_Crossfire_7500.jpg">
+              <button class="card_btn" id="13"><span>&#9829</span></button>
+              <div class="card_content">
+                <h3 class="card_header">Price: $7500</h3>
+                <p class="card_text">Make:Chrysler</p>
+                <p class="card_text">Model:Crossfire </p>
+              </div>
+            </div>
+          </div>
+          <div class="product">
+            <div id="product14">
+              <img class="card_img" src="./db/img/Chrysler_delta_3899.jpg" />
+              <button class="card_btn" id="14"><span>&#9829</span></button>
+              <div class="card_content">
+                <h3 class="card_header">Price: $3899</h3>
+                <p class="card_text">Make:Chrysler</p>
+                <p class="card_text">Model:Delta </p>
+              </div>
+            </div>
+          </div>
+          <div class="product">
+            <div id="product15">
+              <img class="card_img" src="./db/img/Chrysler_Voyager_2495.jpg" />
+              <button class="card_btn" id="15"><span>&#9829</span></button>
+              <div class="card_content">
+                <h3 class="card_header">Price: $2495</h3>
+                <p class="card_text">Make:Chrysler</p>
+                <p class="card_text">Model:Voyager </p>
+              </div>
+            </div>
+          </div>
+          <div class="product">
+            <div id="product16">
+              <img class="card_img" src="./db/img/Chrysler_pt_Cruiser_2250.jpg" />
+              <button class="card_btn" id="16"><span>&#9829</span></button>
+              <div class="card_content">
+                <h3 class="card_header">Price: $2250</h3>
+                <p class="card_text">Make:Chrysler</p>
+                <p class="card_text">Model:PT Cruiser </p>
+              </div>
+            </div>
+          </div>
+          <div class="product">
+            <div id="product17">
+              <img class="card_img" src="./db/img/Chrysler_Ypsilon_2390.jpg" />
+              <button class="card_btn" id="17"><span>&#9829</span></button>
+              <div class="card_content">
+                <h3 class="card_header">Price: $2390</h3>
+                <p class="card_text">Make:Chrysler</p>
+                <p class="card_text">Model:Ypsilon </p>
+              </div>
+            </div>
+          </div>
+          <!--Ford Car Models-->
+          <div class="product">
+            <div id="product18">
+              <img class="card_img" src="./db/img/Ford_B_max_4490.jpg" />
+              <button class="card_btn" id="18"><span>&#9829</span></button>
+              <div class="card_content">
+                <h3 class="card_header">Price: $4490</h3>
+                <p class="card_text">Make:Ford</p>
+                <p class="card_text">Model:B Max </p>
+              </div>
+            </div>
+          </div>
+          <div class="product">
+            <div id="product19">
+              <img class="card_img" src="./db/img/Ford_C_Max_8399.jpg" />
+              <button class="card_btn" id="19"><span>&#9829</span></button>
+              <div class="card_content">
+                <h3 class="card_header">Price: $8399</h3>
+                <p class="card_text">Make:Ford</p>
+                <p class="card_text">Model:C Max </p>
+              </div>
+            </div>
+          </div>
+          <div class="product">
+            <div id="product20">
+              <img class="card_img" src="./db/img/Ford_escape_4800.jpg" />
+              <button class="card_btn" id="20"><span>&#9829</span></button>
+              <div class="card_content">
+                <h3 class="card_header">Price: $4800</h3>
+                <p class="card_text">Make:Ford</p>
+                <p class="card_text">Model:Escape </p>
+              </div>
+            </div>
+          </div>
+          <div class="product">
+            <div id="product21">
+              <img class="card_img" src="./db/img/Ford_fiesta_8694.jpg" />
+              <button class="card_btn" id="21"><span>&#9829</span></button>
+              <div class="card_content">
+                <h3 class="card_header">Price: $8694</h3>
+                <p class="card_text">Make:Ford</p>
+                <p class="card_text">Model:Festa </p>
+              </div>
+            </div>
+          </div>
+          <div class="product">
+            <div id="product22">
+              <img class="card_img" src="./db/img/Ford_Focus_13500.jpg" />
+              <button class="card_btn" id="22"><span>&#9829</span></button>
+              <div class="card_content">
+                <h3 class="card_header">Price: $13500</h3>
+                <p class="card_text">Make:Ford</p>
+                <p class="card_text">Model:Focus </p>
+              </div>
+            </div>
+          </div>
+          <div class="product">
+            <div id="product23">
+              <img class="card_img" src="./db/img/Ford_mustang_21989.jpg" />
+              <button class="card_btn" id="23"><span>&#9829</span></button>
+              <div class="card_content">
+                <h3 class="card_header">Price: $21989</h3>
+                <p class="card_text">Make:Ford</p>
+                <p class="card_text">Model:Mustang </p>
+              </div>
+            </div>
+          </div>
+          <!--Honda Car Models-->
+          <div class="product">
+            <div id="product24">
+              <img class="card_img" src="./db/img/Honda_Accord_9425.jpg" />
+              <button class="card_btn" id="24"><span>&#9829</span></button>
+              <div class="card_content">
+                <h3 class="card_header">Price: $9425</h3>
+                <p class="card_text">Make:Honda</p>
+                <p class="card_text">Model:Accord </p>
+              </div>
+            </div>
+          </div>
+          <div class="product">
+            <div id="product25">
+              <img class="card_img" src="./db/img/Honda_civic_54950.jpg" />
+              <button class="card_btn" id="25"><span>&#9829</span></button>
+              <div class="card_content">
+                <h3 class="card_header">Price: $54950</h3>
+                <p class="card_text">Make:Honda</p>
+                <p class="card_text">Model:Civic </p>
+              </div>
+            </div>
+          </div>
+          <div class="product">
+            <div id="product26">
+              <img class="card_img" src="./db/img/Honda_CR_X_9999.jpg" />
+              <button class="card_btn" id="26"><span>&#9829</span></button>
+              <div class="card_content">
+                <h3 class="card_header">Price: $9999</h3>
+                <p class="card_yext">Make:Honda</p>
+                <p class="card_text">Model:CR-X </p>
+              </div>
+            </div>
+          </div>
+          <div class="product">
+            <div id="product27">
+              <img class="card_img" src="./db/img/Honda_HR_v_37270.jpg" />
+              <button class="card_btn" id="27"><span>&#9829</span></button>
+              <div class="card_content">
+                <h3 class="card_header">Price: $37270</h3>
+                <p class="card_text">Make:Honda</p>
+                <p class="card_text">Model:HR-V</p>
+              </div>
+            </div>
+          </div>
+          <div class="product">
+            <div id="product28">
+              <img class="card_img" src="./db/img/Honda_Jazz_29125.jpg" />
+              <button class="card_btn" id="28"><span>&#9829</span></button>
+              <div class="card_content">
+                <h3 class="card_header">Price: $29125</h3>
+                <p class="card_text">Make:Honda</p>
+                <p class="card_text">Model:Jazz</p>
+              </div>
+            </div>
+          </div>
+          <div class="product">
+            <div id="product29">
+              <img class="card_img" src="./db/img/Honda_ZR_v_39495.jpg" />
+              <button class="card_btn" id="29"><span>&#9829</span></button>
+              <div class="card_content">
+                <h3 class="card_header">Price: $39495</h3>
+                <p class="card_text">Make:Honda</p>
+                <p class="card_text">Model:ZR-V</p>
+              </div>
+            </div>
+          </div>
+          <!--Hyundai Car Models-->
+          <div class="product">
+            <div id="product30">
+              <img class="card_img" src="./db/img/Hyundai_Bayon_22420.jpg" />
+              <button class="card_btn" id="30"><span>&#9829</span></button>
+              <div class="card_content">
+                <h3 class="card_header">Price: $22420</h3>
+                <p class="card_text">Make:Hyundai</p>
+                <p class="card_text">Model:Bayon</p>
+              </div>
+            </div>
+          </div>
+          <div class="product">
+            <div id="product31">
+              <img class="card_img" src="./db/img/Hyundai_i_20_27030.jpg" />
+              <button class="card_btn" id="31"><span>&#9829</span></button>
+              <div class="card_content">
+                <h3 class="card_header">Price: $27030</h3>
+                <p class="card_text">Make:Hyundai</p>
+                <p class="card_text">Model:i-20</p>
+              </div>
+            </div>
+          </div>
+          <div class="product">
+            <div id="product32">
+              <img class="card_img" src="./db/img/Hyundai_I_30_32995.jpg" />
+              <button class="card_btn" id="32"><span>&#9829</span></button>
+              <div class="card_content">
+                <h3 class="card_header">Price: $32995</h3>
+                <p class="card_text">Make:Hyundai</p>
+                <p class="card_text">Model:i-30</p>
+              </div>
+            </div>
+          </div>
+          <div class="product">
+            <div id="product33">
+              <img class="card_img" src="./db/img/Hyundai_iONIQ_14990.jpg" />
+              <button class="card_btn" id="33"><span>&#9829</span></button>
+              <div class="card_content">
+                <h3 class="card_header">Price: $14990</h3>
+                <p class="card_text">Make:Hyundai</p>
+                <p class="card_text">Model:IONIQ</p>
+              </div>
+            </div>
+          </div>
+          <div class="product">
+            <div id="product34">
+              <img class="card_img" src="./db/img/Hyundai_KONA_25495.jpg" />
+              <button class="card_btn" id="34"><span>&#9829</span></button>
+              <div class="card_content">
+                <h3 class="card_header">Price: $25495</h3>
+                <p class="card_text">Make:Hyundai</p>
+                <p class="card_text">Model:KONA</p>
+              </div>
+            </div>
+          </div>
+          <div class="product">
+            <div id="product35">
+              <img class="card_img" src="./db/img/Hyundai_TUSCOn_8500.jpg" />
+              <button class="card_btn" id="35"><span>&#9829</span></button>
+              <div class="card_content">
+                <h3 class="card_header">Price: $8500</h3>
+                <p class="card_text">Make:Hyundai</p>
+                <p class="card_text">Model:TUSCON</p>
+              </div>
+            </div>
+          </div>
+          <!--Jaguar Car Models-->
+          <div class="product">
+            <div id="product36">
+              <img class="card_img" src="./db/img/Jaguar_E_PACE_9989.jpg" />
+              <button class="card_btn" id="36"><span>&#9829</span></button>
+              <div class="card_content">
+                <h3 class="card_header">Price: $9989</h3>
+                <p class="card_text">Make:Jaguar</p>
+                <p class="card_text">Model:E-PACE</p>
+              </div>
+            </div>
+          </div>
+          <div class="product">
+            <div id="product37">
+              <img class="card_img" src="./db/img/Jaguar_XE_3500.jpg" />
+              <button class="card_btn" id="37"><span>&#9829</span></button>
+              <div class="card_content">
+                <h3 class="card_header">Price: $3500</h3>
+                <p class="card_text">Make:Jaguar</p>
+                <p class="card_text">Model:XE</p>
+              </div>
+            </div>
+          </div>
+          <div class="product">
+            <div id="product38">
+              <img class="card_img" src="./db/img/Jaguar_XF_52430.jpg" />
+              <button class="card_btn" id="38"><span>&#9829</span></button>
+              <div class="card_content">
+                <h3 class="card_header">Price: $52430</h3>
+                <p class="card_text">Make:Jaguar</p>
+                <p class="card_text">Model:XF</p>
+              </div>
+            </div>
+          </div>
+          <div class="product">
+            <div id="product39">
+              <img class="card_img" src="./db/img/Jaguar_F_pace_10990.jpg">
+              <button class="card_btn" id="39"><span>&#9829</span></button>
+              <div class="card_content">
+                <h3 class="card_header">Price: $10990</h3>
+                <p class="card_text">Make:Jaguar</p>
+                <p class="card_text">Model:F-Pace</p>
+              </div>
+            </div>
+          </div>
+          <div class="product">
+            <div id="product40">
+              <img class="card_img" src="./db/img/Jaguar_xkr_8450.jpg" />
+              <button class="card_btn" id="40"><span>&#9829</span></button>
+              <div class="card_content">
+                <h3 class="card_header">Price: $8450</h3>
+                <p class="card_text">Make:Jaguar</p>
+                <p class="card_text">Model:XKR</p>
+              </div>
+            </div>
+          </div>
+          <div class="product">
+            <div id="product41">
+              <img class="card_img" src="./db/img/Jaguar_X_Type_4495.jpg" />
+              <button class="card_btn" id="41"><span>&#9829</span></button>
+              <div class="card_content">
+                <h3 class="card_header">Price: $4495</h3>
+                <p class="card_text">Make:Jaguar</p>
+                <p class="card_text">Model:X-Type</p>
+              </div>
+            </div>
+          </div>
+          <!--Kia Car Models-->
+          <div class="product">
+            <div id="product42">
+              <img class="card_img" src="./db/img/KIA_ceed_2225.jpg" />
+              <button class="card_btn" id="42"><span>&#9829</span></button>
+              <div class="card_content">
+                <h3 class="card_header">Price: $2225</h3>
+                <p class="card_text">Make:KIA</p>
+                <p class="card_text">Model:Ceed</p>
+              </div>
+            </div>
+          </div>
+          <div class="product">
+            <div id="product43">
+              <img class="card_img" src="./db/img/KIA_Picanto_2100.jpg" />
+              <button class="card_btn" id="43"><span>&#9829</span></button>
+              <div class="card_content">
+                <h3 class="card_header">Price: $2100</h3>
+                <p class="card_text">Make:KIA</p>
+                <p class="card_text">Model:Picanto</p>
+              </div>
+            </div>
+          </div>
+          <div class="product">
+            <div id="product44">
+              <img class="card_img" src="./db/img/KIA_sportage_41995.jpg" />
+              <button class="card_btn" id="44"><span>&#9829</span></button>
+              <div class="card_content">
+                <h3 class="card_header">Price: $41995</h3>
+                <p class="card_text">Make:KIA</p>
+                <p class="card_text">Model:Sportage</p>
+              </div>
+            </div>
+          </div>
+          <div class="product">
+            <div id="product45">
+              <img class="card_img" src="./db/img/KIA_Stonic_26375.jpg">
+              <button class="card_btn" id="45"><span>&#9829</span></button>
+              <div class="card_content">
+                <h3 class="card_header">Price: $26375</h3>
+                <p class="card_text">Make:KIA</p>
+                <p class="card_text">Model:Sportage</p>
+              </div>
+            </div>
+          </div>
+          <div class="product">
+            <div id="product46">
+              <img class="card_img" src="./db/img/KIA_venga_11995.jpg" />
+              <button class="card_btn" id="46"><span>&#9829</span></button>
+              <div class="card_content">
+                <h3 class="card_header">Price: $11995</h3>
+                <p class="card_text">Make:KIA</p>
+                <p class="card_text">Model:Venga</p>
+              </div>
+            </div>
+          </div>
+          <div class="product">
+            <div id="product47">
+              <img class="card_img" src="./db/img/KIA_XCeed_13750.jpg" />
+              <button class="card_btn" id="47"><span>&#9829</span></button>
+              <div class="card_content">
+                <h3 class="card_header">Price: $13750</h3>
+                <p class="card_text">Make:KIA</p>
+                <p class="card_text">Model:XCeed</p>
+              </div>
+            </div>
+          </div>
+          <!--Lexus Car Models-->
+          <div class="product">
+            <div id="product48">
+              <img class="card_img" src="./db/img/Lexus_ct_6795.jpg" />
+              <button class="card_btn" id="48"><span>&#9829</span></button>
+              <div class="card_content">
+                <h3 class="card_header">Price: $6795</h3>
+                <p class="card_text">Make:Lexus</p>s <p class="card_text">Model:CT</p>
+              </div>
+            </div>
+          </div>
+          <div class="product">
+            <div id="product49">
+              <img class="card_img" src="./db/img/Lexus_ES_20430.jpg" />
+              <button class="card_btn" id="49"><span>&#9829</span></button>
+              <div class="card_content">
+                <h3 class="card_header">Price: $20430</h3>
+                <p class="card_text">Make:Lexus</p>
+                <p class="card_text">Model:ES</p>
+              </div>
+            </div>
+          </div>
+          <div class="product">
+            <div id="product50">
+              <img class="card_img" src="./db/img/Lexus_is_2289.jpg" />
+              <button class="card_btn" id="50"><span>&#9829</span></button>
+              <div class="card_content">
+                <h3 class="card_header">Price: $2289</h3>
+                <p class="card_text">Make:Lexus</p>
+                <p class="card_text">Model:IS</p>
+              </div>
+            </div>
+          </div>
+          <div class="product">
+            <div id="product51">
+              <img class="card_img" src="./db/img/Lexus_NX_13490.jpg" />
+              <button class="card_btn" id="51"><span>&#9829</span></button>
+              <div class="card_content">
+                <h3 class="card_header">Price: $13490</h3>
+                <p class="card_text">Make:Lexus</p>
+                <p class="card_text">Model:NX</p>
+              </div>
+            </div>
+          </div>
+          <div class="product">
+            <div id="product52">
+              <img class="card_img" src="./db/img/Lexus_rx_51419.jpg" />
+              <button class="card_btn" id="52"><span>&#9829</span></button>
+              <div class="card_content">
+                <h3 class="card_header">Price: $511419</h3>
+                <p class="card_text">Make:Lexus</p>
+                <p class="card_text">Model:RX</p>
+              </div>
+            </div>
+          </div>
+          <div class="product">
+            <div id="product53">
+              <img class="card_img" src="./db/img/Lexus_RXL_41710.jpg" />
+              <button class="card_btn" id="53"><span>&#9829</span></button>
+              <div class="card_content">
+                <h3 class="card_header">Price: $41710</h3>
+                <p class="card_text">Make:Lexus</p>
+                <p class="card_text">Model:RXL</p>
+              </div>
+            </div>
+          </div>
+          <!--Mercedes Car Models-->
+          <div class="product">
+            <div id="product54">
+              <img class="card_img" src="./db/img/Mercedes_a_class_3700.jpg" />
+              <button class="card_btn" id="54"><span>&#9829</span></button>
+              <div class="card_content">
+                <h3 class="card_header">Price: $3700</h3>
+                <p class="card_text">Make:Mercedes</p>
+                <p class="card_text">Model:A Class</p>
+              </div>
+            </div>
+          </div>
+          <div class="product">
+            <div id="product55">
+              <img class="card_img" src="./db/img/Mercedes_C_Class_38495.jpg" />
+              <button class="card_btn" id="55"><span>&#9829</span></button>
+              <div class="card_content">
+                <h3 class="card_header">Price: $38495</h3>
+                <p class="card_text">Make:Mercedes</p>
+                <p class="card_text">Model:C Class</p>
+              </div>
+            </div>
+          </div>
+          <div class="product">
+            <div id="product56">
+              <img class="card_img" src="./db/img/Mercedes_cla_class_33253.jpg" />
+              <button class="card_btn" id="56"><span>&#9829</span></button>
+              <div class="card_content">
+                <h3 class="card_header">Price: $33253</h3>
+                <p class="card_text">Make:Mercedes</p>
+                <p class="card_text">Model:CLA Class</p>
+              </div>
+            </div>
+          </div>
+          <div class="product">
+            <div id="product57">
+              <img class="card_img" src="./db/img/Mercedes_E_Class_88995.jpg" />
+              <button class="card_btn" id="57"><span>&#9829</span></button>
+              <div class="card_content">
+                <h3 class="card_header">Price: $88995</h3>
+                <p class="card_text">Make:Mercedes</p>
+                <p class="card_text">Model:E Class</p>
+              </div>
+            </div>
+          </div>
+          <div class="product">
+            <div id="product58">
+              <img class="card_img" src="./db/img/Mercedes_gla_14999.jpg" />
+              <button class="card_btn" id="58"><span>&#9829</span></button>
+              <div class="card_content">
+                <h3 class="card_header">Price: $14999</h3>
+                <p class="card_text">Make:Mercedes</p>
+                <p class="card_text">Model:GLA</p>
+              </div>
+            </div>
+          </div>
+          <div class="product">
+            <div id="product59">
+              <img class="card_img" src="./db/img/Mercedes_GLE_59000.jpg" />
+              <button class="card_btn" id="59"><span>&#9829</span></button>
+              <div class="card_content">
+                <h3 class="card_header">Price: $59000</h3>
+                <p class="card_text">Make:Mercedes</p>
+                <p class="card_text">Model:GLE</p>
+              </div>
+            </div>
+          </div>
+          <!--Nissan Car Models-->
+          <div class="product">
+            <div id="product60">
+              <img class="card_img" src="./db/img/Nissan_ariya_36950.jpg" />
+              <button class="card_btn" id="60"><span>&#9829</span></button>
+              <div class="card_content">
+                <h3 class="card_header">Price: $36950</h3>
+                <p class="card_text" class="card_text">Make:Nissan</p>
+                <p class="card_text">Model:ARIYA</p>
+              </div>
+            </div>
+          </div>
+          <div class="product">
+            <div id="product61">
+              <img class="card_img" src="./db/img/Nissan_Juke_3395.jpg" />
+              <button class="card_btn" id="61"><span>&#9829</span></button>
+              <div class="card_content">
+                <h3 class="card_header">Price: $3395</h3>
+                <p class="card_text">Make:Nissan</p>
+                <p class="card_text">Model:Juke</p>
+              </div>
+            </div>
+          </div>
+          <div class="product">
+            <div id="product62">
+              <img class="card_img" src="./db/img/Nissan_micra_13995.jpg" />
+              <button class="card_btn" id="62"><span>&#9829</span></button>
+              <div class="card_content">
+                <h3 class="card_header">Price: $3395</h3>
+                <p class="card_text">Make:Nissan</p>
+                <p class="card_text">Model:Micra</p>
+              </div>
+            </div>
+          </div>
+          <div class="product">
+            <div id="product63">
+              <img class="card_img" src="./db/img/Nissan_Pulsar_20200.jpg" />
+              <button class="card_btn" id="63"><span>&#9829</span></button>
+              <div class="card_content">
+                <h3 class="card_header">Price: $20200</h3>
+                <p class="card_text">Make:Nissan</p>
+                <p class="card_text">Model:Pulsar</p>
+              </div>
+            </div>
+          </div>
+          <div class="product">
+            <div id="product64">
+              <img class="card_img" src="./db/img/Nissan_Qashqai_37495.jpg" />
+              <button class="card_btn" id="64"><span>&#9829</span></button>
+              <div class="card_content">
+                <h3 class="card_header">Price: $37495</h3>
+                <p class="card_text">Make:Nissan</p>
+                <p class="card_text">Model:Qashqai</p>
+              </div>
+            </div>
+          </div>
+          <div class="product">
+            <div id="product65">
+              <img class="card_img" src="./db/img/Nissan_X_Trail_40095.jpg" />
+              <button class="card_btn" id="65"><span>&#9829</span></button>
+              <div class="card_content">
+                <h3 class="card_header">Price: $40095</h3>
+                <p class="card_text">Make:Nissan</p>
+                <p class="card_text">Model:X-Trail</p>
+              </div>
+            </div>
+          </div>
+          <!--Seat Car Models-->
+          <div class="product">
+            <div id="product66">
+              <img class="card_img" src="./db/img/SEAT_Alhambra_3299.jpg" />
+              <button class="card_btn" id="66"><span>&#9829</span></button>
+              <div class="card_content">
+                <h3 class="card_header">Price: $3299</h3>
+                <p class="card_text">Make:SEAT</p>
+                <p class="card_text">Model:Alhambra</p>
+              </div>
+            </div>
+          </div>
+          <div class="product">
+            <div id="product67">
+              <img class="card_img" src="./db/img/SEAT_arona_6990.jpg" />
+              <button class="card_btn" id="67"><span>&#9829</span></button>
+              <div class="card_content">
+                <h3 class="card_header">Price: $6990 </h3>
+                <p class="card_text">Make:SEAT</p>
+                <p class="card_text">Model:Arona</p>
+              </div>
+            </div>
+          </div>
+          <div class="product">
+            <div id="product68">
+              <img class="card_img" src="./db/img/SEAT_Ateca_29950.jpg" />
+              <button class="card_btn" id="68"><span>&#9829</span></button>
+              <div class="card_content">
+                <h3 class="card_header">Price: $29950</h3>
+                <p class="card_text">Make:SEAT</p>
+                <p class="card_text">Model:Ateca</p>
+              </div>
+            </div>
+          </div>
+          <div class="product">
+            <div id="product69">
+              <img class="card_img" src="./db/img/SEAT_ibiza_13995.jpg" />
+              <button class="card_btn" id="69"><span>&#9829</span></button>
+              <div class="card_content">
+                <h3 class="card_header">Price: $13995</h3>
+                <p class="card_text">Make:SEAT</p>
+                <p class="card_text">Model:Ibiza</p>
+              </div>
+            </div>
+          </div>
+          <div class="product">
+            <div id="product70">
+              <img class="card_img" src="./db/img/SEAT_Leon_21495.jpg" />
+              <button class="card_btn" id="70"><span>&#9829</span></button>
+              <div class="card_content">
+                <h3 class="card_header">Price: $21495</h3>
+                <p class="card_text">Make:SEAT</p>
+                <p class="card_text">Model:Leon</p>
+              </div>
+            </div>
+          </div>
+          <div class="product">
+            <div id="product71">
+              <img class="card_img" src="./db/img/SEAT_Tarraco_33995.jpg" />
+              <button class="card_btn" id="71"><span>&#9829</span></button>
+              <div class="card_content">
+                <h3 class="card_header">Price: $33995</h3>
+                <p class="card_text">Make:SEAT</p>
+                <p class="card_text">Model:Tarraco</p>
+              </div>
+            </div>
+          </div>
+          <!--Toyota Car Models-->
+          <div class="product">
+            <div id="product72">
+              <img class="card_img" src="./db/img/Toyota_auris_9989.jpg" />
+              <button class="card_btn" id="72"><span>&#9829</span></button>
+              <div class="card_content">
+                <h3 class="card_header">Price: $9989</h3>
+                <p class="card_text">Make:Toyota</p>
+                <p class="card_text">Model:Auris</p>
+              </div>
+            </div>
+          </div>
+          <div class="product">
+            <div id="product73">
+              <img class="card_img" src="./db/img/Toyota_AYGO_12987.jpg" />
+              <button class="card_btn" id="73"><span>&#9829</span></button>
+              <div class="card_content">
+                <h3 class="card_header">Price: $12987</h3>
+                <p class="card_text">Make:Toyota</p>
+                <p class="card_text">Model:AYGO</p>
+              </div>
+            </div>
+          </div>
+          <div class="product">
+            <div id="product74">
+              <img class="card_img" src="./db/img/Toyota_corolla_29995.jpg" />
+              <button class="card_btn" id="74"><span>&#9829</span></button>
+              <div class="card_content">
+                <h3 class="card_header">Price: $29995</h3>
+                <p class="card_text">Make:Toyota</p>
+                <p class="card_text">Model:Corolla</p>
+              </div>
+            </div>
+          </div>
+          <div class="product">
+            <div id="product75">
+              <img class="card_img" src="./db/img/Toyota_Estima_6495.jpg" />
+              <button class="card_btn" id="75"><span>&#9829</span></button>
+              <div class="card_content">
+                <h3 class="card_header">Price: $6495</h3>
+                <p class="card_text">Make:Toyota</p>
+                <p class="card_text">Model:Estima</p>
+              </div>
+            </div>
+          </div>
+          <div class="product">
+            <div id="product76">
+              <img class="card_img" src="./db/img/Toyota_prius_23450.jpg" />
+              <button class="card_btn" id="76"><span>&#9829</span></button>
+              <div class="card_content">
+                <h3 class="card_header">Price: $23450</h3>
+                <p class="card_text">Make:Toyota</p>
+                <p class="card_text">Model:Prius</p>
+              </div>
+            </div>
+          </div>
+          <div class="product">
+            <div id="product77">
+              <img class="card_img" src="./db/img/Toyota_Land_Cruiser_57999.jpg" />
+              <button class="card_btn" id="77"><span>&#9829</span></button>
+              <div class="card_content">
+                <h3 class="card_header">Price: $57999</h3>
+                <p class="card_text">Make:Toyota</p>
+                <p class="card_text">Model:Land Cruiser</p>
+              </div>
+            </div>
+          </div>
+          <!--Vauxxall Car Models-->
+          <div class="product">
+            <div id="product78">
+              <img class="card_img" src="./db/img/Vauxhall_Astra_26444.jpg">
+              <button class="card_btn" id="78"><span>&#9829</span></button>
+              <div class="card_content">
+                <h3 class="card_header">Price: $26444</h3>
+                <p class="card_text">Make:Vauxhall</p>
+                <p class="card_text">Model:Astra</p>
+              </div>
+            </div>
+          </div>
+          <div class="product">
+            <div id="product79">
+              <img class="card_img" src="./db/img/Vauxhall_Grandland_X_19249.jpg">
+              <button class="card_btn" id="79"><span>&#9829</span></button>
+              <div class="card_content">
+                <h3 class="card_header">Price: $19249</h3>
+                <p class="card_text">Make:Vauxhall</p>
+                <p class="card_text">Model:Grandland X</p>
+              </div>
+            </div>
+          </div>
+          <div class="product">
+            <div id="product80">
+              <img class="card_img" src="./db/img/Vauxhall_corsa_2995.jpg">
+              <button class="card_btn" id="80"><span>&#9829</span></button>
+              <div class="card_content">
+                <h3 class="card_header">Price: $2995</h3>
+                <p class="card_text">Make:Vauxhall</p>
+                <p class="card_text">Model:Corsa</p>
+              </div>
+            </div>
+          </div>
+          <div class="product">
+            <div id="product81">
+              <img class="card_img" src="./db/img/Vauxhall_mokka_8265.jpg">
+              <button class="card_btn" id="81"><span>&#9829</span></button>
+              <div class="card_content">
+                <h3 class="card_header">Price: $8265</h3>
+                <p class="card_text">Make:Vauxhall</p>
+                <p class="card_text">Model:Mokka</p>
+              </div>
+            </div>
+          </div>
+          <div class="product">
+            <div id="product82">
+              <img class="card_img" src="./db/img/Vauxhall_Vivaro_E_Life_42950.jpg">
+              <button class="card_btn" id="82"><span>&#9829</span></button>
+              <div class="card_content">
+                <h3 class="card_header">Price: $42950</h3>
+                <p class="card_text">Make:Vauxhall</p>
+                <p class="card_text">Model:Vivaro-e Life</p>
+              </div>
+            </div>
+          </div>
+          <div class="product">
+            <div id="product83">
+              <img class="card_img" src="./db/img/Vauxhall_crossland_16350.jpg">
+              <button class="card_btn" id="83"><span>&#9829</span></button>
+              <div class="card_content">
+                <h3 class="card_header">Price: $16350</h3>
+                <p class="card_text">Make:Vauxhall</p>
+                <p class="card_text">Model:Crossland</p>
+              </div>
+            </div>
+          </div> <!--class="grid" ends here-->
+        </div> <!--class="product_wrapper" ends here-->
+
+
+        <div><!--class="content_wrapper" ends here.-->
+
+          <!--Scroll to top button-->
+
+
+          <footer>
+            <div class="bottom">
+              <p> All Rights Reserved @Nasir Automotive 2024</p>
+            </div>
+
+          </footer>
+          <a href="#" class="scrollToTopBtn"><span id="arrow_scroll" onclick="audio.play()">&#x2191</span></a>
+
+    </main>
+
+
+    <!--JAVASCRIPT STARTS HERE-->
+    <!--<script type="text/javascript" src="experiment.js"></script>-->
+    <script type="text/javascript" src="index.js"></script>
+    <script src="experiment.js"></script>
+</body>
+
+</html>
